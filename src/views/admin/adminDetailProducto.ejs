@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/primerDivGeneral.ejs') %>
+
+    <hr id="separador">
+        
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <ul class="list-group">
+                        <li class="list-group-item">Marca: <%= productosUsuario.detalleProducto.marca%></li>
+                        <li class="list-group-item">Modelo: <%= productosUsuario.detalleProducto.modelo%></li>
+                        <li class="list-group-item">Producto: <%= productosUsuario.detalleProducto.producto%></li>
+                        <li class="list-group-item">Temporada: <%= productosUsuario.detalleProducto.temporada%></li>
+                        <li class="list-group-item">Genero: <%= productosUsuario.detalleProducto.genero%></li>
+                        <li class="list-group-item">Talle: <%= productosUsuario.detalleProducto.talle%></li>
+                        <li class="list-group-item">Color: <%= productosUsuario.detalleProducto.color%></li>
+                        <li class="list-group-item">Precio: <%= productosUsuario.detalleProducto.precio%></li>
+                        <li class="list-group-item">Cantidad: <%= productosUsuario.detalleProducto.cantidad%></li>
+                        <li class="list-group-item">Resumen: <%= productosUsuario.detalleProducto.resumen%></li>
+                        <li class="list-group-item">Descripcion: <%= productosUsuario.detalleProducto.descripcion%></li>
+                        <li class="list-group-item ">Imagen: <img class="img-thumbnail" src="/imagenesProdCargados/<%= productosUsuario.detalleProducto.imagen%>" alt=""></li>
+                        <li class="list-group-item">Aceptacion: <%= productosUsuario.detalleProducto.aceptacion%></li>
+                    </ul>
+                
+                    <a class="btn btn-danger" href="/misProductos"><h4 class="text-center">Volver</h4></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+
+    <%- include('../partials/scriptBootstrap.ejs') %>
+
+
+</body>
+</html>

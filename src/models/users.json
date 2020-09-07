@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "nombre": "fulano",
+    "apellido": "detal",
+    "email": "algo@gmail.com",
+    "contraseña": "$2b$10$nDM23r9qDxp5qLOciq2SQ.0CPwVa24pJKh9.Jtwoa/J6op6tR9wNG"
+  },
+  {
+    "id": 2,
+    "nombre": "fulano",
+    "apellido": "detal",
+    "email": "algo@gmail.com",
+    "contraseña": "$2b$10$nDM23r9qDxp5qLOciq2SQ.0CPwVa24pJKh9.Jtwoa/J6op6tR9wNG"
+  },
+  {
+    "id": 3,
+    "nombre": "qwe",
+    "apellido": "asd",
+    "email": "qwe@qwe.com",
+    "contraseña": "$2b$10$wCyITFgw0QhbV6Gkd.VMAOcP7a0Gmi85GFKOODy5/8cBynRWAPjA6"
+  },
+  {
+    "id": 4,
+    "nombre": "Francisco",
+    "apellido": "Vallecillo",
+    "email": "fran_valle91@hotmail.com",
+    "contraseña": "hola"
+  },
+  {
+    "id": 5,
+    "nombre": "santiago",
+    "apellido": "rueda",
+    "email": "santiagorueda@msn.com",
+    "contraseña": "$2b$10$4noMNDTl/D1hhZaLGH32qOQeMgeFXG953nbay8LZ8Ll0mdGz6ML.O"
+  },
+  {
+    "id": 6,
+    "nombre": "agus",
+    "apellido": "perez",
+    "email": "agus@hotmail.com",
+    "contraseña": "$2b$10$vOBn.sAjavOd2XpGiChztus6kJBI6f.Dt9xM1n7SXWsq24osrDkOq"
+  },
+  {
+    "id": 7,
+    "nombre": "Fran",
+    "apellido": "Vallecillo",
+    "email": "fran@hotmail.com",
+    "contraseña": "$2b$10$sVpuLCvQFBx9zFeGCtsGQeF0lLuxU2zRj1s4Beq9RZYtGL9XX6oO6"
+  },
+  {
+    "id": 8,
+    "nombre": "pepe",
+    "apellido": "pepe",
+    "email": "pepe@hotmail.com",
+    "contraseña": "$2b$10$4RFtZtSClgckvVzwFiVQweHx9zTBdmmZweQOB9..Y46ldnz35hf/O"
+  },
+  {
+    "id": 9,
+    "nombre": "Tartas",
+    "apellido": "Vallecillo",
+    "email": "galuesol9@gmail.com",
+    "contraseña": "$2b$10$95Ntw9DgR9z.Nip7BSQK1u7z0hehI3VLC9cUGtxG3q5wE/bXzN31a"
+  },
+  {
+    "id": 10,
+    "nombre": "qwe",
+    "apellido": "qwe",
+    "email": "qwe@qwe.qweqwe",
+    "contraseña": "$2b$10$/miR1AHrNDMvwGmWyP7jCennRoGq7AEtaxTuiUOj.ZZawk/Oc51hG"
+  },
+  {
+    "id": 11,
+    "nombre": "Fernando",
+    "apellido": "Fleck",
+    "email": "fernafleck@gmail.com",
+    "contraseña": "$2b$10$zTA.sCrE.HDqT9.0tOBXrejtST3wvGGEo8PPzOf9kI3Edr2ws4NjK",
+    "avatar": "avatar-1595973419006.jpg",
+    "usuario": "fernando",
+    "dni": "33212222",
+    "telefono": "1234324234",
+    "calle": "ertertre",
+    "altura": "",
+    "dpto": "",
+    "ciudad": "ertert",
+    "provincia": "qeer",
+    "cp": "1427",
+    "titularTarjeta": "ertert",
+    "dniTitular": "",
+    "tarjeta": "",
+    "nroTarjeta": "",
+    "vencimiento": ""
+  },
+  {
+    "id": 12,
+    "nombre": "Sara",
+    "apellido": "sara",
+    "email": "sara@gmail.com",
+    "contraseña": "$2b$10$DjOUDuJVei2yEyX34QEQG.zXPBfNthLq.RO3EyfWnG.kiXbymbmFG",
+    "usuario": "",
+    "dni": "",
+    "telefono": "",
+    "calle": "",
+    "altura": "",
+    "dpto": "",
+    "ciudad": "",
+    "provincia": "",
+    "cp": "",
+    "titularTarjeta": "",
+    "dniTitular": "",
+    "tarjeta": "",
+    "nroTarjeta": "",
+    "vencimiento": ""
+  }
+]

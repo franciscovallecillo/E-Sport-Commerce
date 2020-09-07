@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs') %>
+
+<body>
+    
+
+
+<%- include('../partials/primerDivGeneral.ejs') %>
+
+<div class="container-fluid">
+
+<hr id="separador">
+
+
+        <form action="/misProductos/edit/guardar/<%= productosUsuario.detalleProducto.product_id%>?_method=PUT" method="POST" >
+
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                <label for="validationServer01">Marca (*)</label>
+                <input name="marca" type="text" class="form-control is-valid" id="validationServer01" placeholder="Marca" required="required" value="<%= productosUsuario.detalleProducto.marca%>">
+                </div>
+                <div class="col-md-6 mb-3">
+                <label for="validationServer02">Modelo</label>
+                <input name="modelo" type="text" class="form-control is-valid" id="validationServer02" placeholder="Modelo" value="<%= productosUsuario.detalleProducto.modelo%>" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationServer05">Categoria (*)</label>
+                <select name="producto" class="custom-select is-valid" id="validationServer04" value="<%= productosUsuario.detalleProducto.producto%>">
+                    <option selected disabled value="">Categoria</option>
+                    <option>Mujer</option>
+                    <option>Hombre</option>
+                    <option>Nene</option>
+                    <option>Accesorio</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationServer04">Temporada (*)</label>
+                <select name="temporada" class="custom-select is-valid" id="validationServer04" >
+                <option selected disabled  value="<%= productosUsuario.detalleProducto.temporada%>">Temporada</option>
+                <option>Invierno</option>
+                <option>Verano</option>
+                <option>Otoño</option>
+                <option>Primavera</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="validationServer05">Genero (*)</label>
+                <select name="genero" class="custom-select is-valid" id="validationServer04" value="<%= productosUsuario.detalleProducto.genero%>">
+                    <option selected disabled value="">Genero</option>
+                    <option>Femenino</option>
+                    <option>Masculino</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Talle (*)</label>
+                    <select name="talle" class="custom-select is-valid" id="validationServer04" value="<%= productosUsuario.detalleProducto.talle%>">
+                        <option selected disabled value="">Talle</option>
+                        <option>L</option>
+                        <option>M</option>
+                        <option>S</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Color (*)</label>
+                    <select name="color" class="custom-select is-valid" id="validationServer04" value="<%= productosUsuario.detalleProducto.color%>">
+                        <option selected disabled value="<%= productosUsuario.detalleProducto.color%>">Color</option>
+                        <option>Amarillo</option>
+                        <option>Rojo</option>
+                        <option>Azul</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Precio (*)</label>
+                    <input name="precio" type="number" class="form-control is-valid" id="validationServer02" placeholder="Precio" required="required" value="<%= productosUsuario.detalleProducto.precio%>">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Cantidad (*)</label>
+                    <input name="cantidad" type="number" class="form-control is-valid" id="validationServer02" placeholder="Cantidad" required="required" value="<%= productosUsuario.detalleProducto.cantidad%>">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-12">
+                <label for="validationServer01">Resumen (*)</label>
+                <input name="resumen" type="text" class="form-control is-valid" id="validationServer01" placeholder="Resumen" required="required" value="<%= productosUsuario.detalleProducto.resumen%>">
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-12">
+                <label for="validationServer01">Descripcion</label>
+                <input name="descripcion" type="text" class="form-control is-valid" id="validationServer01" placeholder="Descripcion" value="<%= productosUsuario.detalleProducto.descripcion%>">
+                </div>
+            </div>
+            <br>
+
+            <div class="form-row">
+            <label for="validationServer01">Carga Imagen</label>
+            <input name="imagen" class="" type="file" placeholder="seleccionar imagen" value="<%= productosUsuario.detalleProducto.imagen%>">
+            </div>
+            <br>
+
+            <p >(*) campos obligatorios</p>
+
+            <br>
+
+            <div class="form-group">
+            <div class="form-check">
+                <input name="aceptacion" class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                <label class="form-check-label" for="invalidCheck3">
+                Aceptas las condiciones?
+                </label>
+            </div>
+            </div>
+         
+            <button  type="submit" class="btn btn-primary buttonFormulario"><h6 class="text-center">Guardar Cambios</h6></button>
+            
+        </form>
+        <br>
+
+        <a href="/misProductos"><button class="btn btn-primary buttonFormulario" ><h6 class="text-center">Volver</h6></button></a>
+    </div>
+
+    <br>
+
+    <br>
+    
+        <%- include('../partials/footer.ejs') %>
+
+        <%- include('../partials/scriptBootstrap.ejs') %>
+
+    </body>
+    
+</html>
+
+
+

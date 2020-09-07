@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/head.ejs') %>
+
+<body>
+
+    <%- include('../partials/primerDivGeneral.ejs') %>
+
+
+        <hr id="separador">
+
+        <br>
+
+        <div class="row">
+            <div class="col-12">
+                <h2 style="font-family: cursive"class="TuBolso">¡¡Ingresa tus Datos y accede a los mejor productos!!</h2>
+            </div>
+        </div>
+
+
+<br>
+        
+
+
+<div class="container-fluid">
+            <div class="row">
+                <div class="col-8 mx-auto bg-light pt-2 ">
+                    <div class="signup-form">
+                        <% if (typeof errors != 'undefined') { %>
+                            <p class='text-light bg-danger text-center'>¡ERROR!</p>
+                            <% if (typeof errors == 'string') { %>
+                                <p class='text-danger text-center'><%= errors %></p>
+                            <% }else{ %>
+                                <ul>
+                                    <% for (let i=0; i < errors.length ; i++){ %>
+                                        <li class='text-danger text-center'>
+                                            <%= errors[i].msg %>
+                                        </li>
+                                    <% } %>
+                                </ul>
+                            <% } %>
+                        <% } %>
+
+
+                        
+                        <!--Aquí muestro los errores del lado del Js-Front -->
+                        <div class='text-light bg-danger text-center'>
+                            <ul id="erroresJs" class="erroresAltaUsuario">
+                    
+                            </ul>
+                        </div>
+
+
+                        <form class="row" id="formulario"  action="/altaUsuario" method="post">
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" >
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" name="apellido" placeholder="Apellido" >
+                            </div>
+                            <div class="form-group  roup col-12">
+                                <input type="email" class="form-control" name="email" placeholder="Email" >
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="password" class="form-control" name="password" placeholder="Contraseña" >
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="password" class="form-control" name="password2" placeholder="Confirmar contraseña" >
+                            </div>
+                            <div class="form-inline form-group d-flex ml-auto mr-4">
+                                <button type="submit" class="btn btn-dark fuenteform">Crear Cuenta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>                        
+            </div>
+        </div>
+
+        <div class="text-center my-3">Ya tengo una cuenta? <a href="/login">Inicia sesión</a></div>
+    </div>
+  
+
+
+</form>
+<br>
+<br>
+
+
+</div>
+
+<script src="/js/registro.js"></script>
+<%- include('../partials/footer.ejs') %>
+
+<%- include('../partials/scriptBootstrap.ejs') %>
+
+</body>
+</html>

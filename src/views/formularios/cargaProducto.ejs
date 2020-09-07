@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head.ejs') %>
+
+<body>
+</body>
+
+    <%- include('../partials/primerDivGeneral.ejs') %>
+
+    <div class="container-fluid">
+
+        <!-- Parte superior -->
+
+
+
+        <hr id="separador">
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="TuBolso">Publica Tu Anuncio!!</h1>
+            </div>
+        </div>
+        <br>
+        <% if (typeof errors != 'undefined') { %>
+          <p class='text-light bg-danger text-center'>¡ERROR!</p>
+          <% if (typeof errors == 'string') { %>
+              <p class='text-danger text-center'><%= errors %></p>
+          <% }else{ %>
+              <ul>
+                  <% for (let i=0; i < errors.length ; i++){ %>
+                      <li class='text-danger text-center'>
+                          <%= errors[i].msg %>
+                      </li>
+                  <% } %>
+              </ul>
+          <% } %>
+        <% } %>
+        <br>
+
+        <div class='text-light bg-danger text-center'>
+          <ul id="erroresJs" class="erroresLogin">
+                          
+          </ul>
+        </div>
+
+        <form id="formProductoJs" action="/cargaProducto/carga" method="POST" enctype="multipart/form-data">
+             <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationServer01">Marca (*)</label>
+                  <input name="marca" type="text" class="form-control" id="validationServer01" placeholder="Marca">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationServer02">Modelo</label>
+                  <input name="modelo" type="text" class="form-control" id="validationServer02" placeholder="Modelo">
+                </div>
+              </div>
+
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationServer05">Categoria (*)</label>
+                <select name="categoria" class="custom-select" id="validationServer04">
+                    <option selected disabled value="">Categoria</option>
+                    <option>Mujer</option>
+                    <option>Hombre</option>
+                    <option>Nene</option>
+                    <option>Accesorios</option>
+                  </select>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationServer04">Temporada (*)</label>
+                <select name="temporada" class="custom-select" id="validationServer04">
+                  <option selected disabled value="">Temporada</option>
+                  <option>Invierno</option>
+                  <option>Verano</option>
+                  <option>Otoño</option>
+                  <option>Primavera</option>
+                </select>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationServer05">Genero (*)</label>
+                <select name="genero" class="custom-select" id="validationServer04">
+                    <option selected disabled value="">Genero</option>
+                    <option>Femenino</option>
+                    <option>Masculino</option>
+                    <option>Unisex</option>
+                  </select>
+              </div>
+              </div>
+
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Talle (*)</label>
+                    <select name="talle" class="custom-select" id="validationServer04">
+                        <option selected disabled value="">Talle</option>
+                        <option>L</option>
+                        <option>M</option>
+                        <option>S</option>
+                        <option>Varios</option>
+                      </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Color (*)</label>
+                    <select name="color" class="custom-select" id="validationServer04">
+                        <option selected disabled value="">Color</option>
+                        <option>Amarillo</option>
+                        <option>Rojo</option>
+                        <option>Azul</option>
+                        <option>Verde</option>
+                        <option>Blanco</option>
+                        <option>Gris</option>
+                        <option>Negro</option>
+                        <option>Otros</option>
+                      </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Precio (*)</label>
+                    <input name="precio" type="number" class="form-control" id="validationServer02" placeholder="Precio">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationServer05">Cantidad (*)</label>
+                    <input name="cantidad" type="number" class="form-control" id="validationServer02" placeholder="Cantidad">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-12">
+                  <label for="validationServer01">Resumen (*)</label>
+                  <input name="resumen" type="text" class="form-control" id="validationServer01" placeholder="Resumen">
+                </div>
+            </div>
+            <br>
+            <div class="form-row">
+                <div class="col-12">
+                  <label for="validationServer01">Descripcion</label>
+                  <input name="descripcion" type="text" class="form-control" id="validationServer01" placeholder="Descripcion">
+                </div>
+            </div>
+            <br>
+
+            <div class="form-row">
+            <label for="validationServer01">Carga Imagen</label>
+            <input name="imagen" class="" type="file" placeholder="seleccionar imagen">
+            </div>
+            <br>
+
+            <p >(*) campos obligatorios</p>
+
+            <br>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input name="aceptacion" class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required="required">
+                <label class="form-check-label" for="invalidCheck3">
+                  Aceptas las condiciones?
+                </label>
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-12">
+                    <button  type="submit" class="btn btn-primary buttonFormulario">Agregar Anuncio</button>
+                </div>
+            </div>
+
+      </form>
+
+        <br>
+        
+        <br>
+        <%- include('../partials/footer.ejs') %>
+
+    </div>
+
+    <script src="/js/productos.js"></script>
+    
+    <%- include('../partials/scriptBootstrap.ejs') %>
+    
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+</html>
